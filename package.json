@@ -1,8 +1,8 @@
 {
-  "name": "react-website",
-  "version": "0.0.0",
-  "private": true,
   "homepage": "https://deepaksinghbhandari.github.io/portfolio",
+  "name": "react-website",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,14 +15,14 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "bootstrap": "^5.3.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.33.0",

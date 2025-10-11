@@ -14,7 +14,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      const scrollPos = window.scrollY + 100;
+      const scrollPos = window.scrollY + 120; // offset for fixed navbar
       navLinks.forEach((link) => {
         const section = document.getElementById(link.id);
         if (section && scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
@@ -29,14 +29,14 @@ const Navbar = () => {
   const handleClick = (e, id) => {
     e.preventDefault();
     const section = document.getElementById(id);
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <nav className={`navbar navbar-expand-md fixed-top ${scrolled ? "bg-dark shadow" : "bg-transparent"}`} style={{ transition: "0.3s" }}>
+    <nav className={`navbar navbar-expand-md fixed-top py-3 ${scrolled ? "bg-dark shadow" : "bg-dark bg-opacity-75"}`} style={{ transition: "0.3s" }}>
       <div className="container">
         <a
-          className="navbar-brand fw-bold text-primary"
+          className="navbar-brand fw-bold text-primary fs-4"
           href="#about"
           onClick={(e) => handleClick(e, "about")}
         >
@@ -58,7 +58,7 @@ const Navbar = () => {
               <li className="nav-item" key={link.id}>
                 <a
                   href={`#${link.id}`}
-                  className={`nav-link ${activeLink === link.id ? "text-primary fw-bold" : "text-light"}`}
+                  className={`nav-link px-3 ${activeLink === link.id ? "text-primary fw-bold" : "text-light"}`}
                   onClick={(e) => handleClick(e, link.id)}
                 >
                   {link.text}
@@ -66,11 +66,11 @@ const Navbar = () => {
               </li>
             ))}
 
-            <li className="nav-item d-flex gap-2 ms-3">
-              <a href="https://github.com/deepaksinghbhandari" target="_blank" className="nav-link text-light fs-5">
+            <li className="nav-item d-flex gap-3 ms-4">
+              <a href="https://github.com/deepaksinghbhandari" target="_blank" className="nav-link text-light fs-5" rel="noreferrer">
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/deepak-singh-bhandari-96311a317" target="_blank" className="nav-link text-light fs-5">
+              <a href="https://www.linkedin.com/in/deepak-singh-bhandari-96311a317" target="_blank" className="nav-link text-light fs-5" rel="noreferrer">
                 <FaLinkedin />
               </a>
             </li>

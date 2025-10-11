@@ -7,7 +7,7 @@ import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
-    <div>
+    <div style={{ paddingTop: "70px" }}>
       <Navbar />
       <Hero />
       <Projects />
