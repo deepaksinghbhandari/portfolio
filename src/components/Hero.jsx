@@ -44,7 +44,7 @@ const Hero = () => {
             </p>
 
             <div className="d-flex flex-column flex-sm-row gap-3 mb-4 justify-content-center justify-content-md-start">
-              <a href="/portfolio/assets/deepakprofesswionalcv.pdf" download className="btn btn-primary fw-bold px-4">
+              <a href="/portfolio/assets/deepaksinghbhandariprofessionalcv.pdf" download className="btn btn-primary fw-bold px-4">
                 Download Resume
               </a>
               <a href="#projects" className="btn btn-outline-primary fw-bold px-4">
